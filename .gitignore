@@ -1,0 +1,18 @@
+# Ignore everything
+*
+
+# Except for...
+!package.json
+!yarn.lock
+!tsconfig.json
+!README.md
+!LICENSE
+!run-hasura.sh
+!*.html
+!*.css
+!src/
+!src/**/*.ts
+!src/**/*.tsx
+
+# And of course, this file
+!.gitignore

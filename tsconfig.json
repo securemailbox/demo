@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6", "dom"],
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "moduleResolution": "node",
+    "types": ["react"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
