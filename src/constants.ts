@@ -1,6 +1,6 @@
 const HASURA_GRAPHQL_ENGINE_HOSTNAME = "localhost:8081";
 
-const scheme = (proto) => {
+const scheme = (proto: string) => {
   return window.location.protocol === "https:" ? `${proto}s` : proto;
 };
 
