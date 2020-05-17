@@ -1,8 +1,6 @@
 import React from "react";
-import gql from "graphql-tag";
-import { VictoryChart, VictoryTheme, VictoryLine } from "victory";
 import ApolloClient from "apollo-client";
-import { useSubscription, useQuery } from "@apollo/react-hooks";
+import { useQuery } from "@apollo/react-hooks";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
 import { MAILBOXES_QUERY, MAILBOXES_SUBSCRIPTION } from "../queries";
@@ -19,8 +17,6 @@ const Graph = (props: GraphProps) => {
     loading: mailboxesLoading,
     subscribeToMore,
   } = useQuery(MAILBOXES_QUERY);
-
-  console.log(mailbox);
 
   return mailboxesLoading ? (
     <div>Loading...</div>
