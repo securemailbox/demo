@@ -11,3 +11,5 @@ export const wsUrl = `${scheme(
 export const httpUrl = `${scheme(
   "http"
 )}://${HASURA_GRAPHQL_ENGINE_HOSTNAME}/v1/graphql`;
+
+export const securemailboxesUrl = `http://localhost:5000`;
