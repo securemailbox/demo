@@ -8,15 +8,19 @@ type Mailbox = {
 };
 
 type MailboxGraphProps = {
-  mailboxes: Mailbox[];
+  mailboxes: Mailbox[] | undefined;
+  loading: boolean;
   subscribeToUpdates?: Function;
   resolution?: string;
 };
 
 const MailboxGraph = (props: MailboxGraphProps) => {
-  const { mailboxes, resolution = "s" } = props;
-  // console.log(mailboxes, resolution);
+  const { mailboxes: _mailboxes, loading, resolution = "s" } = props;
 
+  if (loading) return <div>Loading Mailboxes</div>;
+
+  // Quick and dirty workaround to unpack mailboxes after we know they're loaded
+  const mailboxes = _mailboxes.mailbox;
   useEffect(() => props.subscribeToUpdates && props.subscribeToUpdates(), []);
 
   return (

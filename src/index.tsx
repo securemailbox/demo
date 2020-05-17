@@ -10,7 +10,6 @@ import Main from "./components/Main";
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div>Welcome to my app</div>
       <Main />
     </ApolloProvider>
   );
