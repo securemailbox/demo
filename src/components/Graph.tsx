@@ -29,7 +29,6 @@ const Graph = (props: GraphProps) => {
           updateQuery: (prev, { subscriptionData }) => {
             if (!subscriptionData.data) return prev;
             const newMailboxEntry = subscriptionData.data.mailbox;
-            console.log(prev);
             return {
               ...prev,
               mailbox: newMailboxEntry,
